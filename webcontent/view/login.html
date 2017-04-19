@@ -1,0 +1,197 @@
+
+	<header class="header_login ">
+		<div class="container-fluid"> 
+			<div class="row">
+			<div class="fixed_logo ">
+  			<div class="col-md-3 col-xs-7 col-sm-3 login_logo  ">
+            	<img class="img-responsive" src="images/logo.png"  alt="Logo"/> 
+            </div>
+			</div>			
+			<div class="col-md-6 col-xs-12 col-sm-8 login_container pull-right clearfix">
+				<form>
+					<div>
+						<h4 class="col-md-4 col-xs-12 col-sm-4 hidden-xs" >Login</h4>
+						<div class="login_label  pull-left ">
+							<div class="col-md-4 col-xs-12 col-sm-4 pull-left ">
+								<p>Email</p>
+								<input type="text" class="form-control " ng-model="userData.userid">
+								<span ng-if="!validation.login_username" class=" col-sm-12 xe-list-label xe-alert_cpassword pull-right"  style="color: darkorange; font-size: 13px !important;">
+								 Please enter valid Username</span>
+								 
+								
+								
+								<!-- <input id="checkbox1" class="icon-checkbox hidden-xs " type="checkbox" />
+									<label for="checkbox1">
+									  <span class='glyphicon glyphicon-unchecked unchecked hidden-xs'></span>
+									  <span class='glyphicon glyphicon-check checked hidden-xs'></span>
+									 <span class="hidden-xs">Keep Login</span>
+									</label> -->
+																
+								
+								
+							</div>
+							
+							<div class="col-md-4 col-xs-12 col-sm-4 pull-left">
+								<p>Password</p>
+								<input  class="form-control" type="password" ng-model="userData.password">								
+								 <span ng-if="!validation.login_password" class=" col-sm-12 xe-list-label xe-alert_cpassword pull-right" style="color: darkorange; font-size: 13px !important;" >
+								 Please enter valid password</span>
+								  <span ng-click="forgotPassword();"> <a href=""  target="" style="color: white;"> <p><u>Forgot Password ?</u></p></a> </span>
+								  
+								<!--  <p><u>Forgot Password ?</u></p> -->
+							</div>
+							<div class="col-md-4 col-xs-12 col-sm-4 text-center pull-left ">								
+								<button type="button" class="btn btn-primary  login_btn" ng-click="login_click();">Login</button>
+							
+							</div>
+						 
+						</div>
+						 <span ng-if="!validation.login_banner_msg" class="col-xs-12 hidden-xs xe-alert_cpassword" style="color: darkorange; font-size: 13px !important;" >
+								 Please enter valid username and password</span>	
+					</div>
+					
+					
+				</form>
+            
+			</div>
+	
+		</div> 
+		</div>
+	</header>
+	
+	
+	<div class="container-fluid  login_body"> 
+	<div class="col-md-5 col-sm-5 pull-left clearfix  overview_container hidden-xs  ">
+	
+		<h2>Empowering with the right information <br class="hidden-sm"> at the right time </h2>
+		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid ergo aliud intellegetur nisi uti ne quae pars naturae neglegatur? Si qua in iis corrigere voluit, deteriora fecit. Duo Reges: constructio interrete. Erat enim res aperta. Illa sunt similia: hebes acies est cuipiam oculorum, corpore alius senescit. Et harum quidem rerum facilis est et expedita distinctio. 
+		 Duo Reges: constructio interrete. Erat enim res aperta. Illa sunt similia: hebes acies est cuipiam oculorum, corpore alius senescit. Et harum quidem rerum facilis est et expedita distinctio.</p>  -->
+		 
+		 
+	</div>
+	<div class="col-md-6 col-xs-12 col-sm-6 pull-right top-space clearfix new_user_container">
+		
+ 	 <form name="registerForm" id="registerForm" ng-submit="submitRegisterData()" class="form" novalidate>
+			<div class="col-md-10 col-xs-12 col-sm-12 clearfix new_user_form  ">
+						<div class="col-md-12 col-xs-12 col-sm-12 top-space">
+						<!-- <h3 ng-if="isWebSaved"  style="color: #61923C;">Registration Successful.Please login</h3>
+						<br/>
+					<h4>New User? Register here</h4> -->
+				</div>
+			
+				<div class="col-md-6 col-xs-12 col-sm-12 top-space">
+					<!-- <p>First Name</p>
+					<input type="text" class="form-control"minlength="4" maxlength="20" pattern="(.){4,20}" ng-change="checkValidation('firstName')" ng-model="registerForm.firstName" placeholder="Enter Firstname" required> -->
+					<!--  <span ng-if="!validation.firstName" class=" col-sm-12 xe-list-label xe-alert_cpassword pull-right" style="color: red; font-size: 13px !important;" >First name should be 4 to 20 characters!</span> -->
+				</div>
+				<div class="col-md-6 col-xs-12 col-sm-12 top-space">
+					<!-- <p>Last Name</p>
+					<input type="text" minlength="4" maxlength="20" pattern="(.){4,20}" ng-change="checkValidation('lastName')"  ng-model="registerForm.lastName" placeholder="Enter Lastname" class="form-control" required>
+					 <span ng-if="!validation.lastName" class=" col-sm-12 xe-list-label xe-alert_cpassword pull-right" style="color: red; font-size: 13px !important;">Last name should be 4 to 20 characters!</span> -->
+				</div>
+				
+				<div class="col-md-12 col-xs-12 col-sm-12 top-space">
+					<!-- <p>Email</p>
+					<input type="email" id="email" ng-blur="emailCheck()"
+						class="form-control" ng-model="registerForm.username"
+						placeholder="Enter Email id" required> <span ng-if="!validation.username" class=" col-sm-12 xe-list-label xe-alert_cpassword pull-right" style="color: red; font-size: 13px !important;">Not valid email!</span>	
+                 <span ng-if="!emailPass" class=" col-sm-12 xe-list-label xe-alert_cpassword pull-right" style="color: red; font-size: 13px !important;">Email already exists!</span> -->
+				</div>
+				
+				<div class="col-md-12 col-xs-12 col-sm-12 top-space">
+					<!-- <p>Password</p>
+					<input type="password" class="form-control" ng-blur="checkValidation('password')"  ng-model="registerForm.password" placeholder="Enter Password" id="txtPassword" required>
+					<i class="fa fa-eye errspan" aria-hidden="true"></i>
+					 <span ng-if="!validation.password" class=" col-sm-12 xe-list-label xe-alert_cpassword pull-right" style="color: red; font-size: 13px !important;">Please enter valid password!</span>
+					<input type="password" class="form-control" ng-blur="checkValidation('password')"  ng-model="registerForm.password" placeholder="Enter Password" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" required>
+					 <span class=" col-sm-12 xe-list-label xe-alert_cpassword pull-right" id="password_strength"></span>  
+					<i class="fa fa-eye errspan" aria-hidden="true"></i>
+					<span class="fa fa-info-circle errspan"></span> -->
+				</div>
+				<div class="col-md-12 col-xs-12 col-sm-12 top-space text-center">
+				<!-- <input type="submit" ng-disabled="form.$invalid || isLoading" id="submit" class="btn btn-primary register_btn" value="Register" /> -->
+				
+				</div>
+			
+				
+				<!-- <form name="myform" ng-submit="submit()" class="form" novalidate> -->
+				
+			<!-- 	<div class="col-md-12 col-xs-12 col-sm-12 top-space text-center"> -->
+				
+				<!-- Enter text and hit enter:
+  <input type="text" ng-model="text" name="text" />
+					<button type="submit" class="btn btn-primary register_btn">Register</button>
+					<input type="submit" id="submit" value="Submit" />
+				</div>
+				
+			</div>
+		</form> -->
+		
+		<!-- 
+		<form ng-submit="submit()" ng-controller="loginController">
+  Enter text and hit enter:
+  <input type="text" ng-model="text" name="text" />
+  <input type="submit" id="submit" value="Submit" />
+  <pre>list={{list}}</pre> -->
+<!-- </form> -->
+	</div>
+	</div>
+	
+<script type="text/javascript">
+    function CheckPasswordStrength(password) {
+        var password_strength = document.getElementById("password_strength");
+ 
+        //TextBox left blank.
+        if (password.length == 0) {
+            password_strength.innerHTML = "";
+            return;
+        }
+ 
+        //Regular Expressions.
+        var regex = new Array();
+        regex.push("[A-Z]"); //Uppercase Alphabet.
+        regex.push("[a-z]"); //Lowercase Alphabet.
+        regex.push("[0-9]"); //Digit.
+        regex.push("[$@$!%*#?&]"); //Special Character.
+ 
+        var passed = 0;
+ 
+        //Validate for each Regular Expression.
+        for (var i = 0; i < regex.length; i++) {
+            if (new RegExp(regex[i]).test(password)) {
+                passed++;
+            }
+        }
+ 
+        //Validate for length of Password.
+        if (passed > 2 && password.length > 8) {
+            passed++;
+        }
+ 
+        //Display status.
+        var color = "";
+        var strength = "";
+        switch (passed) {
+            case 0:
+            case 1:
+                strength = "Password Weak";
+                color = "red";
+                break;
+            case 2:
+                strength = "Password Good";
+                color = "darkorange";
+                break;
+            case 3:
+            case 4:
+                strength = "Password Strong";
+                color = "green";
+                break;
+            case 5:
+                strength = "Password Very Strong";
+                color = "darkgreen";
+                break;
+        }
+        password_strength.innerHTML = strength;
+        password_strength.style.color = color;
+    }
+</script>

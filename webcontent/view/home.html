@@ -1,0 +1,295 @@
+
+<header class="header">
+    <div class="container-fluid" scroll-to-end="scrollToEndWindow" bind-to-window="true">
+        <div class="row">
+            <div class="col-md-3 col-xs-4 col-sm-6 logo ">
+                <img class="img-responsive" src="images/logo.png" alt="Logo" />
+            </div>
+            <div class="col-md-3  icon_container">
+                <div class="icon_wrapper ">
+
+               <!--      <div class="icon_circle">
+                        <img class="img-responsive" src="images/alert.png" alt="" />
+                    </div>
+
+                    <div class="icon_circle">
+                        <img class="img-responsive" src="images/archive.png" alt="">
+                    </div>
+
+                    <div class="icon_circle  hidden-xs">
+                        <img class="img-responsive" src="images/settings.png" alt="" />
+                    </div>
+
+                    <div class="icon_circle  hidden-xs">
+                        <img class="img-responsive" src="images/help.png" alt="" />
+                    </div> -->
+                      <div class="icon_circle  ">
+                     <!--  <span ng-click="homebtn_click();> <img class="img-responsive" src="images/home.png" alt="" /></span> -->
+                       <span ng-click="homebtn_click();">  <img class="img-responsive" src="images/home.png" alt="" /></span>
+                    </div>
+                    
+                    <div class="icon_circle hidden-xs">
+                  <!--   <span ng-click="changePassword();> <img  class="img-responsive" src="images/change_pwd.png" alt="" /></span> -->
+                    <span ng-click="changePassword();">  <img class="img-responsive" src="images/change_pwd.png" alt="" /></span>
+                    </div>
+
+                    <div class="icon_circle  hidden-xs">
+                   <span ng-click="logout();">  <img class="img-responsive" src="images/logout.png" alt="" /></span>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <p class="welcome_label"> Welcome {{displayName}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <nav class="navbar navbar-default top_navbar">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                       <div class="col-xs-6 col-sm-3  search_items hidden-md hidden-lg">
+                            <div class="form-group">
+                                <input type="text" class="form-control" ng-change="change(text)" ng-model="searchText" ng-model-options="{debounce: 1000}" placeholder="Search">
+                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                            </div>
+                            </div>
+                            <div class="col-sm-2"></div>
+                <div class="col-xs-2 col-sm-3 search_items hidden-md hidden-lg">
+                 <div class=" clearfix"> <p class="img-responsive keyword_icon_mob pull-right" data-container="body" data-placement="bottom" data-toggle="popover">KEYWORD CLOUD</p>
+                <!--  <img class="img-responsives keyword_icon_mob pull-right" 
+		src="images/Trending.png"  alt="Keyword"  />  --></div>
+                        </div>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="dropdown sub_toggle_btn">
+                            <button class="navbar_sub_toggle_btn hidden-sm hidden-xs dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></button>
+                          
+                        </div>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown" ng-repeat="category in allSubCategory" ng-class="{'active': activeMenu === category.categoryName}">
+                                <a class="dropdown-toggle" data-toggle="dropdown" ng-click="setActive(category.categoryName)"
+          href="">{{category.categoryName}}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="tech_trends"><a href="" ng-click="navCat_click(nav.subcategory);" target="" ng-model="nav.subcategory" 
+                                     ng-class="{'selectedSubCategory': selectedSubcategory === nav.subcategory}" ng-repeat="nav in category.subCategories">{{nav.subcategory}}</a></li>  
+<!--                                      
+                                       <li class="tech_trends"><a href="#/home" ng-click="navCat_click(nav.subcategory);" target="" ng-model="nav.subcategory" 
+                                     ng-class="{'slectedSubCategory': selectedSubcategory==nav.subcategory}" ng-repeat="nav in category.subCategories">{{nav.subcategory}}</a></li>   -->                                
+                                </ul>
+                            </li>
+                    
+                         <li class="hidden-lg hidden-md  visible-xs"> 
+                                <ul>
+                                    <!-- <li><a href="#">Setting</a></li>-->
+                                    <li ng-click="changePassword();"><a href="">Change Password</a></li> 
+                                    <li ng-click="logout();"> <a href="">Logout</a></li>
+                                    
+                       <!--                     <div class="icon_circle  ">
+                      <span ng-click="homebtn_click();> <img class="img-responsive" src="images/home.png" alt="" /></span>
+                       <span ng-click="homebtn_click();">  <img class="img-responsive" src="images/home.png" alt="" /></span>
+                    </div>
+                    
+                    <div class="icon_circle hidden-xs">
+                    <span ng-click="changePassword();> <img  class="img-responsive" src="images/change_pwd.png" alt="" /></span>
+                    <span ng-click="changePassword();">  <img class="img-responsive" src="images/change_pwd.png" alt="" /></span>
+                    </div>
+
+                    <div class="icon_circle  hidden-xs">
+                   <span ng-click="logout();">  <img class="img-responsive" src="images/logout.png" alt="" /></span>
+                    </div> -->
+                                    
+                                    
+                                    
+                                    
+                                </ul>
+                            </li>
+
+                        </ul>
+ <div class="hidden-sm hidden-xs col-md-3">
+               
+             <!-- <a href="#" data-toggle="tooltip" class="tootip_postn" data-placement="top" title="TrendingSubCategories Icon"> -->
+           <!--   <img class="img-responsive keyword_icon" src="images/Trending.png"  alt="Keyword" data-container="body" data-toggle="popover"
+           /> --> 
+        <!--    <button type="button" class="img-responsive keyword_icon pull-right" data-container="body" data-placement="bottom" data-toggle="popover">KEYWORD CLOUD</button> -->
+          <p class="img-responsive keyword_icon pull-right" data-container="body" data-placement="bottom" data-toggle="popover">KEYWORD CLOUD</p> 
+         </a>  
+            <!--   <span class="tooltiptext">Tooltip text</span> -->
+          
+	
+				
+			  </div>
+			  <!--  <ul class="nav navbar-nav hidden-sm hidden-xs">
+                            <li> -->
+			   
+
+  <!-- <button type="button" class="btn btn-primary" ng-click="scrollCheck_click();">Scroll Check Web</button> -->
+           
+		<!--  <img class="img-responsive col-md-1 col-sm-1 col-xs-3 pull-right keyword_icon hidden-sm hidden-xs " 
+		src="images/keyword_icon.png"  alt="Keyword" data-container="body" data-toggle="popover" data-placement="left" />
+	
+		<img class="img-responsive col-md-1 col-sm-1 col-xs-3 pull-right keyword_icon_mob hidden-md hidden-lg" 
+		src="images/keyword_icon.png"  alt="Keyword" /> -->
+		
+							
+		
+		
+	
+	<!--  </li>
+ -->
+                      <!--   </ul> -->
+                     <!--   <div class="pull-right"> -->
+                        <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs pull-right  col-md-2">
+                            <li class="pull-right">
+                                <form class="navbar-form navbar-right">
+                                    <div class="form-group">
+                                       <input type="text" class="form-control" ng-change="change(text)" ng-model="searchText" ng-model-options="{debounce: 1000}" placeholder="Search for anything">
+                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                    </div>
+
+                                </form>
+                            </li>
+
+                        </ul>
+<!-- </div> -->
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
+
+</header>
+<div class="container-fluid body-content">
+ 
+  <div class="row">
+
+  <!-- <button type="button" class="btn btn-primary" ng-click="scrollCheck_click();">Scroll Check Web</button> -->
+           
+		<!--  <img class="img-responsive col-md-1 col-sm-1 col-xs-3 pull-right keyword_icon hidden-sm hidden-xs " 
+		src="images/keyword_icon.png"  alt="Keyword" data-container="body" data-toggle="popover" data-placement="left" />
+	
+		<img class="img-responsive col-md-1 col-sm-1 col-xs-3 pull-right keyword_icon_mob hidden-md hidden-lg" 
+		src="images/keyword_icon.png"  alt="Keyword" /> -->
+		
+	
+		
+		
+	</div> 
+	<div class="row ">
+        <div class="col-md-9 ">
+        <div class="row "> 
+        </div>
+		<div class="row "> 
+        	<div ng-hide="isTextEntered==true" class="col-md-9  post_count">News Articles : {{allCategoryAndSubCategoryForNewsAndWebCount}}</div>
+        		<div ng-show="isTextEntered==true" class="col-md-9  post_count">News Articles after search : {{allCategoryAndSubCategoryForNewsAndWebCount}}</div>
+        </div>
+ <!--    <div class="row">
+        <div class="col-md-9"> -->
+
+            <div class="row">
+                <div class="verticalLine ">
+                    <div class="clearfix margin-right-less">
+                    <div class="col-md-4 padding_right_less hidden-md hidden-lg">
+						<div class="keyword_tile ">
+							 <input  type="text" id="pickyDate"/>
+							<img class="img-responsive " 
+							src="images/wordcloud_img.png"  alt="Keyword"  />						
+							</div>							
+						</div>                    
+                        <div class="col-md-4 padding_right_less" ng-repeat="catSubCat in allCategoryAndSubCategoryForNewsAndWeb">							
+                            <div class="news_tile">	
+                                <div class="media">
+                                    <a class="media-left">                                 
+                                  
+                                     <img class="media-object" ng-model="catSubCat.subCategory" ng-src="{{getIcons(catSubCat.subCategory)}}" alt=""> 
+                                    </a>
+                                    <div class="media-body">                                  
+                                       <h5 class="media-heading">{{catSubCat.subCategory}}</h5> 
+                                        <span class="calander_wrap"><span class="glyphicon glyphicon-time" aria-hidden="true" ng-model="catSubCat.postDate"></span>
+											<span> Posted on {{catSubCat.postDate | date:'dd-MM-yyyy' }}</span>
+										</span>  
+										<!-- <img class="media-body" style="width:60px; float:right; cursor:pointer" ng-src="images/edit.jpg" alt="" 
+										ng-click="editDialog.open(allSubCategory, catSubCat)" /> -->
+									</div>
+									<div class="media_text_box  ">
+									  <!--   <h3 class="media_text_heading"><a target="_blank" href='http://www.thehindu.com/'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a> </h3> -->
+										<h3 class="media_text_heading"><a target="_blank" href={{catSubCat.url}}>{{catSubCat.title}}</a> </h3>
+										<div class="hidden-lg hidden-md  visible-sm visible-xs">
+											<!-- <span class="glyphicon glyphicon-thumbs-up hover_icons margin-right-less"></span>
+											<span class="glyphicon glyphicon-trash hover_icons margin-right-less"></span>
+											<span class="glyphicon glyphicon-envelope hover_icons margin-right-less"></span> -->
+										</div>
+									<p>                                
+         				
+									<img style="height:40px;width:50px" ng-model="catSubCat.imageUrl" ng-src="{{catSubCat.imageUrl}}" onerror='this.style.display = "none"' class="pull-left sub_left_img" alt="">
+                         
+                                   {{catSubCat.summary}}</p>
+                             </div>
+                               <!--  <div class=" hover-icon_wrapper clearfix hidden-sm hidden-xs ">
+                                    <div class="icon_circle_hover">
+                                        <span class="glyphicon glyphicon-thumbs-up hover_icons "></span>
+                                    </div>
+                                    <div class="icon_circle_hover">
+                                        <span class="glyphicon glyphicon-trash hover_icons"></span>
+                                    </div>
+                                    <div class="icon_circle_hover">
+                                        <span class="glyphicon glyphicon-envelope hover_icons"></span>
+                                    </div>
+                                </div> -->
+
+								
+                            </div>
+
+                        </div>
+							
+                    </div>
+<!--  end of ng-repeat -->
+                </div>
+            </div>
+
+        </div>
+ </div>
+ 
+  <div class="col-md-3">
+   <div class="row "> 
+        </div>
+ 	<div ng-hide="isTextEntered==true" class="chatter_postcount">Chatterbox Posts : {{allCategoryAndSubSategoryForTwitterAndFaceBookCount}}</div> 
+ 	<div ng-show="isTextEntered==true" class="chatter_postcount">Chatterbox Posts after search: {{allCategoryAndSubSategoryForTwitterAndFaceBookCount}}</div>
+			
+            <div class="chatter_wrap">
+                <h3 class="chatter_head">Chatter Box</h3>
+         
+         <!--    <button type="button" class="btn btn-primary" ng-click="scrollCheck_click();">Scroll Check Twitter</button> -->
+             </div>
+				<div scroll-to-end="scrollToEndContainer" id="chatter_scroll">
+		
+            <div class="chatter_tile  chatter_tile-right-less" ng-repeat="catSubCat in allCategoryAndSubSategoryForTwitterAndFaceBook">
+                <div class="chatter_header_wrap clearfix">
+                   <!--  <span><img class="img-circle img-responsive" src="images/cb_profile.PNG" alt=""></span> -->
+                    <span><img class="img-cichatter_tile-right-lesscle img-circle img-responsive" ng-model="catSubCat.subCategory" ng-src="{{getIcons(catSubCat.subCategory)}}" alt=""> </span>
+                    <span class="chatter_head_txt"><p>{{catSubCat.subCategory}}</p><p> Posted on {{catSubCat.postDate | date:'dd-MM-yyyy' }}</p></span>
+                    <span class="pull-right no-padding"><img class="img-circle img-responsive img_width"  ng-src="{{catSubCat.source == 'TWITTER' ? 'images/twitter_logo.png' : 'images/fb.png'}}" alt=""></span>
+                </div>
+                <div class="chatter_txt_wrap">
+                
+            
+                         <p>{{catSubCat.summary}}
+                         
+                          <a ng-show="catSubCat.url!=null" target="_blank" href={{catSubCat.url}}><u>Read More</u></a> </p>
+                        
+                </div>
+            </div>
+  
+</div>
+ <edit-dialog model="editDialog" on-submit="formSubmitted(this)"></edit-dialog>  
+

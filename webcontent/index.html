@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="mightApp">
+<head>
+    <title>Might Application</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+  <!--   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>    
+ -->    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.1.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+   <!--  <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script> -->
+   <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+   
+     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+         <link rel="stylesheet" type="text/css" href="css/jqcloud.css" />
+    <link rel="stylesheet" type="text/css" href="css/might_style.css"> 
+    
+     <!-- angular references -->
+    
+ 
+	<script  src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script> 
+	<script src="js/bootstrap.min.js"></script>
+	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/angular-route.js"></script>
+	<script data-require="ui-bootstrap@0.11.0" data-semver="0.11.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    
+  
+	<script type="text/javascript" src="js/jqcloud-1.0.4.js"></script>
+	<script src="app.js"></script>
+	<script src="controllers/loginController.js"></script>
+	<script src="controllers/mainController.js"></script>
+<!--     <base href="/might/">  -->
+	
+    <!-- //// -->
+<!--   <script > 
+  var tmp = $.fn.popover.Constructor.prototype.show;
+	$.fn.popover.Constructor.prototype.show = function () {
+	tmp.call(this);
+	if (this.options.callback) {
+  this.options.callback();
+}
+} 
+  $(document).ready(function(){
+	  
+	  var word_array = [
+          {text: "Lorem", weight: 15},
+          {text: "Ipsum", weight: 9, link: "http://jquery.com/"},
+          {text: "Dolor", weight: 6, html: {title: "I can haz any html attribute"}},
+          {text: "Sit", weight: 7},
+          {text: "Amet", weight: 5}
+          // ...as many words as you want
+      ];
+	  
+	   $("#example").jQCloud(word_array);
+  $('[data-toggle="popover"]').popover({
+      placement : 'left',
+		trigger : 'click',
+      content : '<input data-provide="datepicker" id="datepicker" /><img class="img-responsive " src="./images/wordcloud_img.png" alt="Sample Image" >',
+		 html : true,
+		callback: function() { 
+
+  $("#datepicker").datepicker({
+	
+		   //showOn: both - datepicker will appear clicking the input box as well as the calendar icon
+		   //showOn: button - datepicker will appear only on clicking the calendar icon
+		   showOn: 'both',
+		   //you can use your local path also eg. buttonImage: 'images/x_office_calendar.png'
+		   buttonImage: 'images/calendar_icon.png',
+		   buttonImageOnly: true,
+		   changeMonth: true,
+		   changeYear: true,
+		   showAnim: 'slideDown',
+		   duration: 'fast',
+		   dateFormat: 'dd-mm-yy'
+	   });
+	}
+
+}); 
+  
+  $(".keyword_icon_mob").click(function(){
+      $(".keyword_tile").toggle();
+  });
+	
+	 $(".non_tech_trends").click(function(){
+      $(".keyword_icon").hide();
+		$(".keyword_icon_mob").hide();
+  });
+	
+	 $(".tech_trends").click(function(){
+      $(".keyword_icon").toggle();
+		$(".keyword_icon_mob").toggle();
+  });
+	
+	   $('#pickyDate').datepicker({
+     	   //showOn: both - datepicker will appear clicking the input box as well as the calendar icon
+	   //showOn: button - datepicker will appear only on clicking the calendar icon
+	   showOn: 'both',
+	   //you can use your local path also eg. buttonImage: 'images/x_office_calendar.png'
+	   buttonImage: 'images/calendar_icon.png',
+	   buttonImageOnly: true,
+	   changeMonth: true,
+	   changeYear: true,
+	   showAnim: 'slideDown',
+	   duration: 'fast',
+	   dateFormat: 'dd-mm-yy'
+	});
+	
+
+	}); 
+	
+
+
+
+</script>-->
+
+</head>
+<body ng-controller="mainController">
+    <!--<div ng-if="UserDetails.userName === undefined || UserDetails.userName === null" ng-include="'view/login.html'" id="wrapper"></div>
+    <div ng-if="UserDetails.userName !== undefined && UserDetails.userName !== null" id="wrapper">
+
+
+    </div>-->
+    <div id="main">
+
+        <div ng-view></div>
+
+    </div>
+    <footer class="text-center">
+        <div class="footer"><p>© 2017 UST-Global</p></div>
+    </footer>
+</body>
+</html>

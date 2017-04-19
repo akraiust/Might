@@ -1,0 +1,71 @@
+.spinner {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 300;
+}
+
+.spinnerBackground {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: #000000;
+    opacity: 0.3;
+}
+
+.spinnerSpinner {
+    position: absolute;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.spinnerSpinner svg {
+    width: 80px;
+    height: 80px;
+    stroke: #b59751;
+}
+#map {
+    height: 95%;
+    width: 100%;
+}
+ .scroll {
+    height: 95%;
+}
+ 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+/*.days-hours-heatmap{width: 99%;margin: 0 auto;}
+.days-hours-heatmap .calibration{margin-bottom: 0px;width:99%;}
+.days-hours-heatmap .calibration .group{display: inline-block;}
+.days-hours-heatmap .calibration .description{width:100%;}
+.days-hours-heatmap .calibration .description>label:last-child{float:right;}
+.days-hours-heatmap .calibration>.display-control{float:right;}
+.days-hours-heatmap .calibration>.display-control label{vertical-align: top;}
+.days-hours-heatmap .calibration>.display-control input[type='radio']{cursor: pointer;}
+
+.days-hours-heatmap .heatmap .axis path{display: none;}
+/*.days-hours-heatmap .heatmap .axis line{fill: none;stroke: #000;shape-rendering: crispEdges;}
+.days-hours-heatmap .heatmap .axis text{font-size: 10px;}*/
